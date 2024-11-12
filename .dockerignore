@@ -1,0 +1,7 @@
+Dockerfile
+dog_breed_image_dataset.zip
+dataset
+.dvc
+.git
+*.git*
+*.dvc

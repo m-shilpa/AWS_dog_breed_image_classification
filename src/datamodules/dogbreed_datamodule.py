@@ -30,11 +30,7 @@ class DogBreedImageDataModule(L.LightningDataModule):
         """Download images if not already downloaded and extracted."""
         dataset_path = self.data_path / "dataset"
         if not dataset_path.exists():
-            download_and_extract_archive(
-                url="https://github.com/m-shilpa/lightning-template-hydra/raw/main/dog_breed_image_dataset.zip",
-                download_root=self._data_dir,
-                remove_finished=True,
-            )
+            raise FileNotFoundError(f"Dataset not found at {self.data_path} /dataset. Ensure dvc pull has been run.")
 
     @property
     def data_path(self):

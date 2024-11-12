@@ -1,2 +1,6 @@
 /dataset
 /config.local
+/data
+/logs
+__pycache__
+.gitpod.yml
